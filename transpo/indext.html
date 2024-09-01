@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="csst.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        body {
+            background-image: url('bg.png');
+            background-repeat: no-repeat; 
+            background-color: black;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: 1600px 800px;
+        }
+        
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .button-container button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea class="from-text" placeholder="Enter text"></textarea>
+                <textarea class="to-text" placeholder="Translation" readonly disabled></textarea>
+            </div>
+            <ul class="controls">
+                <li class="row from">
+                    <div class="icons">
+                        <i id="from" class="fas fa-copy"></i>
+                    </div>
+                    <select></select>
+                </li>
+                <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+                <li class="row to">
+                   <select> </select>  
+                    <div class="icons">
+                        <i id="to" class="fas fa-copy"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button> Translate Text </button>
+    </div>
+    <div class="button-container">
+        <button onclick="location.href='../index.php'">Logout</button>
+        <button onclick="location.href='../classroom.php'">Classroom</button>
+        <button onclick="location.href='../ourstory.php'">Our Story</button>
+        <button onclick="location.href='../nextpage.php'">Next Page</button>
+    </div>
+    <script src="js/countries.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

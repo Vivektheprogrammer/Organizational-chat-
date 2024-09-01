@@ -1,0 +1,221 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 20px;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fbf8f8;
+    font-weight: bold;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.menu ul li a:hover {
+    background-color: #45a049;
+    color: #fff;
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+.content-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 80%; 
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow-y: auto; 
+    max-height: 80vh;
+}
+
+.content-section h3 {
+    text-align: center;
+    color: #333;
+}
+
+.content-section form {
+    width: 100%;
+}
+
+.content-section label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.content-section input[type="text"],
+.content-section select,
+.content-section input[type="file"],
+.content-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.content-section input[type="submit"],
+.content-section button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.content-section input[type="submit"]:hover,
+.content-section button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.view-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.view-content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.view-content p {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.view-content img,
+.view-content video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Add responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+    }
+
+    .button-container button {
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .content-section {
+        width: 90%;
+        max-width: 90%;
+        height: auto;
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        margin: 0 auto;
+    }
+
+    .view-content {
+        width: 100%;
+        max-width: 100%;
+    }
+}

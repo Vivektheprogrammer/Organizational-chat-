@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); /* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Import Great Vibes font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap'); /* Import Montserrat font */
+
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Use border-box sizing model */
+  text-decoration: none; /* Remove text decoration */
+  font-family: 'Poppins', sans-serif; /* Set default font to Poppins */
+}
+
+body {
+  display: flex; /* Use flexbox for body */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  min-height: 100vh; /* Set minimum height to 100% of viewport height */
+  background: url('bg.png') no-repeat center center/cover; /* Set background image */
+  padding: 0 10px; /* Add padding */
+}
+
+.wrapper {
+  background: #000; /* Set background color to black */
+  max-width: 70%; /* Set maximum width to 70% of viewport */
+  width: 100%; /* Set width to 100% */
+  border-radius: 16px; /* Add border radius */
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.5), /* Add box shadow */
+              0 32px 64px -48px rgba(0, 0, 0, 0.7);
+}
+
+/* Login & Signup Form CSS Start */
+.form {
+  padding: 35px 50px; /* Add padding */
+  color: #fff; /* Set text color to white */
+}
+
+.form header {
+  font-size: 40px; /* Set font size */
+  font-weight: 600; /* Set font weight */
+  padding-bottom: 20px; /* Add padding bottom */
+  border-bottom: 1px solid #444; /* Add bottom border */
+  font-family: 'Great Vibes', cursive; /* Use Great Vibes font */
+  text-align: center; /* Center align text */
+}
+
+.form form {
+  margin: 30px 0; /* Add margin */
+}
+
+.form form .error-text {
+  color: #721c24; /* Set text color */
+  padding: 12px 15px; /* Add padding */
+  text-align: center; /* Center align text */
+  border-radius: 5px; /* Add border radius */
+  background: #f8d7da; /* Set background color */
+  border: 1px solid #f5c6cb; /* Set border color */
+  margin-bottom: 15px; /* Add bottom margin */
+  display: none; /* Hide by default */
+}
+
+.form form .name-details {
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space out items */
+}
+
+.form .name-details .field {
+  flex: 1; /* Flex to take up available space */
+  margin: 0 7.5px; /* Add margin */
+}
+
+.form .name-details .field:first-child {
+  margin-left: 0; /* Remove left margin */
+}
+
+.form .name-details .field:last-child {
+  margin-right: 0; /* Remove right margin */
+}
+
+.form form .field {
+  display: flex; /* Use flexbox */
+  margin-bottom: 15px; /* Add bottom margin */
+  flex-direction: column; /* Column layout */
+  position: relative; /* Set position */
+}
+
+.form form .field label {
+  margin-bottom: 10px; /* Add bottom margin */
+  color: #bbb; /* Set text color */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+  font-size: 18px; /* Set font size */
+}
+
+.form form .input input {
+  height: 50px; /* Set input height */
+  width: 100%; /* Set input width */
+  font-size: 18px; /* Set font size */
+  padding: 0 15px; /* Add padding */
+  border-radius: 5px; /* Add border radius */
+  border: 1px solid #444; /* Set border color */
+  background: #222; /* Set background color */
+  color: #fff; /* Set text color */
+  transition: all 0.3s; /* Add transition */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.form form .input input:focus {
+  border-color: #888; /* Change border color on focus */
+}
+
+.form form .field input {
+  outline: none; /* Remove outline */
+}
+
+.form form .image input {
+  font-size: 19px; /* Set font size */
+}
+
+.form form .button input {
+  height: 55px; /* Set button height */
+  border: none; /* Remove border */
+  color: #fff; /* Set text color */
+  font-size: 20px; /* Set font size */
+  background: #444; /* Set background color */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Change cursor on hover */
+  margin-top: 15px; /* Add top margin */
+  transition: background 0.3s, transform 0.3s; /* Add transition */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.form form .button input:hover {
+  background: #333; /* Change background on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.form form .field i {
+  position: absolute; /* Set position */
+  right: 20px; /* Set right position */
+  top: 70%; /* Set top position */
+  color: #ccc; /* Set color */
+  cursor: pointer; /* Change cursor on hover */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.form form .field i.active::before {
+  color: #fff; /* Change color */
+  content: "\f070"; /* Change content */
+}
+
+.form .link {
+  text-align: center; /* Center align text */
+  margin: 20px 0; /* Add margin */
+  font-size: 20px; /* Set font size */
+  color: #bbb; /* Set text color */
+}
+
+.form .link a {
+  color: #fff; /* Set link color */
+  transition: color 0.3s; /* Add transition */
+}
+
+.form .link a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #888; /* Change color on hover */
+}
+
+/* Users List CSS Start */
+.users {
+  padding: 35px 50px; /* Add padding */
+  color: #fff; /* Set text color */
+}
+
+.users header,
+.users-list a {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items center */
+  padding-bottom: 25px; /* Add padding bottom */
+  border-bottom: 1px solid #444; /* Add bottom border */
+  justify-content: space-between; /* Space out items */
+}
+
+.wrapper img {
+  object-fit: cover; /* Cover the container */
+  border-radius: 50%; /* Make image circular */
+}
+
+.users header img {
+  height: 60px; /* Set height */
+  width: 60px; /* Set width */
+}
+
+:is(.users, .users-list) .content {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items center */
+}
+
+:is(.users, .users-list) .content .details {
+  color: #fff; /* Set text color */
+  margin-left: 25px; /* Add left margin */
+}
+
+:is(.users, .users-list) .details span {
+  font-size: 22px; /* Set font size */
+  font-weight: 500; /* Set font weight */
+}
+
+.users header .logout {
+  display: block; /* Block display */
+  background: #444; /* Set background color */
+  color: #fff; /* Set text color */
+  outline: none; /* Remove outline */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  text-decoration: none; /* Remove text decoration */
+  border-radius: 5px; /* Add border radius */
+  font-size: 20px; /* Set font size */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.users header .logout:hover {
+  background: #333; /* Change background on hover */
+}
+
+.users .search {
+  margin: 30px 0; /* Add margin */
+  display: flex; /* Use flexbox */
+  position: relative; /* Set position */
+  align-items: center; /* Align items center */
+  justify-content: space-between; /* Space out items */
+}
+
+.users .search .text {
+  font-size: 22px; /* Set font size */
+  color: #bbb; /* Set text color */
+}
+
+.users .search input {
+  position: absolute; /* Set position */
+  height: 50px; /* Set height */
+  width: calc(100% - 200px); /* Set width */
+  font-size: 18px; /* Set font size */
+  padding: 0 20px; /* Add padding */
+  border: 1px solid #444; /* Set border color */
+  outline: none; /* Remove outline */
+  border-radius: 5px 0 0 5px; /* Add border radius */
+  background: #222; /* Set background color */
+  color: #fff; /* Set text color */
+  transition: all 0.3s; /* Add transition */
+  opacity: 0; /* Set initial opacity to 0 */
+  pointer-events: none; /* Disable pointer events */
+}
+
+.users .search input.show {
+  opacity: 1; /* Set opacity to 1 when active */
+  pointer-events: auto; /* Enable pointer events */
+}
+
+.users .search button {
+  position: relative; /* Set position */
+  z-index: 1; /* Set z-index */
+  width: 200px; /* Set width */
+  height: 50px; /* Set height */
+  font-size: 20px; /* Set font size */
+  cursor: pointer; /* Change cursor on hover */
+  border: none; /* Remove border */
+  background: #444; /* Set background color */
+  color: #fff; /* Set text color */
+  outline: none; /* Remove outline */
+  border-radius: 0 5px 5px 0; /* Add border radius */
+  transition: all 0.3s; /* Add transition */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.users .search button:hover {
+  background: #333; /* Change background on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.users-list {
+  max-height: 350px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scroll */
+}
+
+:is(.users-list, .chat-box)::-webkit-scrollbar {
+  width: 0px; /* Hide scrollbar */
+}
+
+.users-list a {
+  padding-bottom: 15px; /* Add padding bottom */
+  margin-bottom: 20px; /* Add bottom margin */
+  padding-right: 20px; /* Add right padding */
+  border-bottom-color: #555; /* Set border color */
+}
+
+.users-list a:last-child {
+  margin-bottom: 0px; /* Remove bottom margin */
+  border-bottom: none; /* Remove bottom border */
+}
+
+.users-list a img {
+  height: 50px; /* Set height */
+  width: 50px; /* Set width */
+  border-radius: 50%; /* Make image circular */
+}
+
+.users-list a .details p {
+  color: #bbb; /* Set text color */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+  font-size: 18px; /* Set font size */
+}
+
+.users-list a .status-dot {
+  font-size: 14px; /* Set font size */
+  color: #468669; /* Set color */
+  padding-left: 10px; /* Add left padding */
+}
+
+.users-list a .status-dot.offline {
+  color: #ccc; /* Change color for offline status */
+}
+
+/* Chat Area CSS Start */
+.chat-area {
+  background: url('bg.png') no-repeat center center/cover; /* Set floral background image */
+}
+
+.chat-area header {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items center */
+  padding: 25px 50px; /* Add padding */
+  color: #fff; /* Set text color */
+}
+
+.chat-area header .back-icon {
+  color: #fff; /* Set icon color */
+  font-size: 24px; /* Set font size */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.chat-area header img {
+  height: 60px; /* Set height */
+  width: 60px; /* Set width */
+  border-radius: 50%; /* Make image circular */
+  margin: 0 20px; /* Add margin */
+}
+
+.chat-area header .details span {
+  font-size: 24px; /* Set font size */
+  font-weight: 500; /* Set font weight */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.chat-box {
+  position: relative; /* Set position */
+  min-height: 500px; /* Set minimum height */
+  max-height: 500px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scroll */
+  padding: 20px 50px 30px 50px; /* Add padding */
+  background: rgba(0, 0, 0, 0.7); /* Set background color with transparency */
+  box-shadow: inset 0 32px 32px -32px rgba(0, 0, 0, 0.5), /* Add inner shadow */
+              inset 0 -32px 32px -32px rgba(0, 0, 0, 0.7);
+}
+
+.chat-box .text {
+  position: absolute; /* Set position */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center text */
+  width: calc(100% - 100px); /* Set width */
+  text-align: center; /* Center align text */
+  font-size: 24px; /* Set font size */
+  color: #ccc; /* Set text color */
+}
+
+.chat-box .chat {
+  margin: 20px 0; /* Add margin */
+}
+
+.chat-box .chat p {
+  word-wrap: break-word; /* Wrap words */
+  padding: 15px 25px; /* Add padding */
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.8), /* Add box shadow */
+              0 16px 16px -16px rgba(0, 0, 0, 0.8);
+  border-radius: 10px; /* Add border radius */
+  font-size: 22px; /* Set font size */
+  color: #fff; /* Set text color */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.chat-box .outgoing {
+  display: flex; /* Use flexbox */
+}
+
+.chat-box .outgoing .details {
+  margin-left: auto; /* Move to right */
+  max-width: calc(100% - 150px); /* Set max width */
+}
+
+.outgoing .details p {
+  background: #444; /* Set background color */
+  color: #fff; /* Set text color */
+  border-radius: 18px 18px 0 18px; /* Add border radius */
+  font-size: 22px; /* Set font size */
+}
+
+.chat-box .incoming {
+  display: flex; /* Use flexbox */
+  align-items: flex-end; /* Align items to end */
+}
+
+.chat-box .incoming img {
+  height: 50px; /* Set height */
+  width: 50px; /* Set width */
+}
+
+.chat-box .incoming .details {
+  margin-right: auto; /* Move to left */
+  margin-left: 20px; /* Add left margin */
+  max-width: calc(100% - 150px); /* Set max width */
+}
+
+.incoming .details p {
+  background: #555; /* Set background color */
+  color: #fff; /* Set text color */
+  border-radius: 18px 18px 18px 0; /* Add border radius */
+  font-size: 22px; /* Set font size */
+}
+
+.typing-area {
+  padding: 20px 50px; /* Add padding */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space out items */
+  background: rgba(0, 0, 0, 0.7); /* Set background color with transparency */
+}
+
+.typing-area input {
+  height: 55px; /* Set input height */
+  width: calc(100% - 180px); /* Set width */
+  font-size: 20px; /* Set font size */
+  padding: 0 20px; /* Add padding */
+  border: 1px solid #444; /* Set border color */
+  outline: none; /* Remove outline */
+  border-radius: 5px 0 0 5px; /* Add border radius */
+  background: #222; /* Set background color */
+  color: #fff; /* Set text color */
+  transition: all 0.3s; /* Add transition */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.typing-area input:focus {
+  border-color: #888; /* Change border color on focus */
+}
+
+.typing-area button {
+  color: #fff; /* Set text color */
+  width: 150px; /* Set width */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  background: #444; /* Set background color */
+  font-size: 22px; /* Set font size */
+  cursor: pointer; /* Change cursor on hover */
+  opacity: 0.7; /* Set initial opacity */
+  pointer-events: none; /* Disable pointer events */
+  border-radius: 0 5px 5px 0; /* Add border radius */
+  transition: all 0.3s; /* Add transition */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.typing-area button.active {
+  opacity: 1; /* Set opacity to 1 when active */
+  pointer-events: auto; /* Enable pointer events */
+}
+
+.typing-area button:hover {
+  background: #333; /* Change background on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Responsive media query */
+@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+        .form,
+        .users,
+        .chat-area {
+          padding: 30px; /* Reduce padding */
+        }
+      
+        .form header {
+          font-size: 35px; /* Reduce font size */
+        }
+      
+        .users header img,
+        .chat-area header img {
+          height: 50px; /* Reduce image height */
+          width: 50px; /* Reduce image width */
+        }
+      
+        .typing-area input {
+          height: 50px; /* Reduce input height */
+          width: calc(100% - 130px); /* Adjust width */
+          font-size: 18px; /* Reduce font size */
+          padding: 0 15px; /* Adjust padding */
+        }
+      
+        .typing-area button {
+          width: 130px; /* Reduce button width */
+          font-size: 20px; /* Reduce font size */
+        }
+      }
+      
+      @media screen and (max-width: 450px) {
+        .form,
+        .users {
+          padding: 25px; /* Further reduce padding */
+        }
+      
+        .form header {
+          font-size: 30px; /* Further reduce font size */
+        }
+      
+        .users header img,
+        .chat-area header img {
+          height: 45px; /* Further reduce image height */
+          width: 45px; /* Further reduce image width */
+        }
+      
+        .typing-area input {
+          height: 45px; /* Further reduce input height */
+          width: calc(100% - 110px); /* Adjust width */
+          font-size: 16px; /* Further reduce font size */
+          padding: 0 10px; /* Adjust padding */
+        }
+      
+        .typing-area button {
+          width: 110px; /* Further reduce button width */
+          font-size: 18px; /* Further reduce font size */
+        }
+      }
+    }

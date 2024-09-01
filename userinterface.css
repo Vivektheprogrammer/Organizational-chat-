@@ -1,0 +1,36 @@
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    width: 70%;
+    margin: auto;
+    overflow-x: auto; 
+}
+
+/* Content styles */
+.content {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 20px; 
+}
+
+.content-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    flex: 0 0 auto; 
+}
+
+.content-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-item video {
+    max-width: 100%;
+    height: auto;
+}

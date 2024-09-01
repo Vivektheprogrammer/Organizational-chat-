@@ -1,0 +1,39 @@
+
+body {
+    margin: 0; 
+    padding: 0; 
+}
+#video-bg {
+    background-color: black;
+    position: fixed;
+    top: -20px; 
+    left: -20px; 
+    right: -20px; 
+    width: calc(100% + 40px); 
+    height: calc(100% + 40px);
+    object-fit: cover;  
+
+}
+.button-container {
+    position: fixed;
+    top: 20px; 
+    right: 20px; 
+    z-index: 999; 
+}
+
+.button-container button {
+    margin-left: 10px; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #003366; 
+}
+
